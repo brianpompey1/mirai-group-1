@@ -4,27 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MIRAI - Launching Soon</title>
-    <script>
-      (function (w, d, e, u, f, l, n) {
-        (w[f] =
-          w[f] ||
-          function () {
-            (w[f].q = w[f].q || []).push(arguments);
-          }),
-          (l = d.createElement(e)),
-          (l.async = 1),
-          (l.src = u),
-          (n = d.getElementsByTagName(e)[0]),
-          n.parentNode.insertBefore(l, n);
-      })(
-        window,
-        document,
-        "script",
-        "https://assets.mailerlite.com/js/universal.js",
-        "ml"
-      );
-      ml("account", "1308897");
-    </script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
 
@@ -34,7 +13,7 @@
         box-sizing: border-box;
       }
 
-      body {
+      /* body {
         background-color: #000000;
         color: #ffffff;
         font-family: "Inter", sans-serif;
@@ -45,14 +24,80 @@
         justify-content: center;
         text-align: center;
         padding: 20px;
+      } */
+
+      body {
+        background-color: #000000;
+        color: #ffffff;
+        font-family: "Inter", sans-serif;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .intro-animation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        animation: fadeOut 0.5s ease-in-out 2.5s forwards;
+      }
+
+      .animated-logo {
+        width: 400px;
+        opacity: 0;
+        transform: scale(0.8);
+        animation: logoAnimation 2s ease-in-out forwards;
+      }
+
+      @keyframes logoAnimation {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      .main-content {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out 3s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
       }
 
       .logo {
-        font-size: 4rem;
-        letter-spacing: 0.2em;
-        color: #d4af37;
+        width: 300px;
         margin-bottom: 2rem;
-        font-weight: 300;
       }
 
       .launch-text {
@@ -88,6 +133,60 @@
         color: #ffffff;
       }
 
+      .social-icon {
+        width: 24px;
+        height: 24px;
+        filter: invert(50%) sepia(13%) saturate(654%) hue-rotate(7deg)
+          brightness(89%) contrast(87%);
+        margin: 0 8px;
+      }
+
+      .social-icon:hover {
+        filter: invert(77%) sepia(38%) saturate(638%) hue-rotate(358deg)
+          brightness(89%) contrast(90%);
+      }
+
+      /* .logo {
+        font-size: 4rem;
+        letter-spacing: 0.2em;
+        color: #d4af37;
+        margin-bottom: 2rem;
+        font-weight: 300;
+      } */
+
+      /* .launch-text {
+        font-size: 2.5rem;
+        color: #8b7355;
+        margin-bottom: 1rem;
+        font-weight: 300;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        color: #8b7355;
+        margin-bottom: 2rem;
+        max-width: 600px;
+      }
+
+      .notify-btn {
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+        padding: 12px 40px;
+        border-radius: 25px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 3rem;
+      } */
+
+      /* .notify-btn:hover {
+        background-color: #d4af37;
+        color: #ffffff;
+      }
+
       .logo {
         margin-bottom: -40px;
       }
@@ -103,77 +202,100 @@
       .social-icon:hover {
         filter: invert(77%) sepia(38%) saturate(638%) hue-rotate(358deg)
           brightness(89%) contrast(90%);
-      }
+      } */
     </style>
   </head>
   <body>
     <!-- <h1 class="logo">MIRAI</h1> -->
-    <svg
-      id="Layer_1"
-      class="logo"
-      data-name="Layer 1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 1920 1080"
-    >
-      <defs>
-        <style>
-          .cls-1 {
-            fill: url(#linear-gradient);
-          }
-        </style>
-        <linearGradient
-          id="linear-gradient"
-          x1="531.22"
-          y1="540"
-          x2="1388.78"
-          y2="540"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset="0" stop-color="#c8944b" />
-          <stop offset="1" stop-color="#edd57c" />
-        </linearGradient>
-      </defs>
-      <path
-        class="cls-1"
-        d="M702.37,454.5V625.65a7.13,7.13,0,1,1-14.26,0V476.81l-65.48,92.31a7.2,7.2,0,0,1-11.67,0l-65.48-92.31V625.65a7.13,7.13,0,1,1-14.26,0V454.5a6.68,6.68,0,0,1,4.93-6.87,6.6,6.6,0,0,1,8,2.73l72.6,102.29L689.4,450.36c2.08-2.86,4.75-3.76,8-2.73A6.69,6.69,0,0,1,702.37,454.5Zm96.79-7.13A7.08,7.08,0,0,0,792,454.5V625.65a7.13,7.13,0,1,0,14.26,0V454.5a7.1,7.1,0,0,0-7.13-7.13ZM975.43,564.19a58.56,58.56,0,0,0,34.88-99.7A56.36,56.36,0,0,0,969,447.37H903.08a7.14,7.14,0,1,0,0,14.27H969a44.34,44.34,0,1,1,0,88.68H903.08a7.08,7.08,0,0,0-7.13,7.13v68.2a7.13,7.13,0,1,0,14.26,0V564.58h46.16l60.81,65.87a6.66,6.66,0,0,0,5.18,2.33,7.08,7.08,0,0,0,7.14-6.87,6.7,6.7,0,0,0-1.82-5.06Zm232.93-112.54a6.51,6.51,0,0,0-6.48-4.28,6.77,6.77,0,0,0-6.62,4.28L1120.45,622.8a7,7,0,0,0-.13,5.44,6.64,6.64,0,0,0,3.76,3.89,7.08,7.08,0,0,0,9.47-3.63l68.33-156.23,63.92,146.25H1184a7.13,7.13,0,1,0,0,14.26h92.71a6.66,6.66,0,0,0,6-3.24,6.55,6.55,0,0,0,.65-6.74Zm178.34-2.2a7.13,7.13,0,0,0-12.18,5.05V625.65a7.13,7.13,0,1,0,14.26,0V454.5A6.85,6.85,0,0,0,1386.7,449.45Z"
-      />
-    </svg>
-    <h2 class="launch-text">Launching soon!</h2>
-    <p class="subtitle">
-      We are currently making some improvements to our website!
-    </p>
-    <button class="ml-onclick-form" onclick="ml('show', 'eG1VMu', true)">
-      Click here to show form
-    </button>
-    <!-- <div class="ml-embedded" data-form="eG1VMu"></div> -->
 
-    <button class="notify-btn">Notify Me</button>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/themiraigroup/" target="_blank">
-        <img
-          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItaW5zdGFncmFtIj48cmVjdCB4PSIyIiB5PSIyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI1IiByeT0iNSI+PC9yZWN0PjxwYXRoIGQ9Ik0xNiAxMS4zN0E0IDQgMCAxIDEgMTIuNjMgOCA0IDQgMCAwIDEgMTYgMTEuMzd6Ij48L3BhdGg+PGxpbmUgeDE9IjE3LjUiIHkxPSI2LjUiIHgyPSIxNy41MSIgeTI9IjYuNSI+PC9saW5lPjwvc3ZnPg=="
-          alt="Instagram"
-          class="social-icon"
-        />
-      </a>
-      <a
-        href="https://www.youtube.com/channel/UCwoPGReEgmveJdCg9JT1K_g"
-        target="_blank"
+    <div class="intro-animation">
+      <svg
+        class="animated-logo"
+        viewBox="0 0 1920 1080"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <img
-          src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjEuNTkzIDcuMjAzYTIuNTA2IDIuNTA2IDAgMCAwLTEuNzYyLTEuNzY2QzE4LjI2NSA1LjAwNyAxMiA1IDEyIDVzLTYuMjY0LS4wMDctNy44MzEuNDA0YTIuNTYgMi41NiAwIDAgMC0xLjc2NiAxLjc3OGMtLjQxMyAxLjU2Ni0uNDE3IDQuODE0LS40MTcgNC44MTRzLS4wMDQgMy4yNjQuNDA2IDQuODE0Yy4yMy44NTcuOTA1IDEuNTM0IDEuNzYzIDEuNzY1IDEuNTgyLjQzMCA3LjgzLjQzNyA3LjgzLjQzN3M2LjI2NS4wMDcgNy44MzEtLjQwM2EyLjUxNSAyLjUxNSAwIDAgMCAxLjc2Ny0xLjc2M2MuNDE0LTEuNTY1LjQxNy00LjgxMi40MTctNC44MTJzLjAyLTMuMjY1LS40MDctNC44MzF6TTkuOTk2IDE1LjAwNWwuMDA1LTYgNS4yMDcgMy4wMDUtNS4yMTIgMi45OTV6Ii8+PC9zdmc+"
-          alt="YouTube"
-          class="social-icon"
+        <defs>
+          <linearGradient
+            id="linear-gradient"
+            x1="531.22"
+            y1="540"
+            x2="1388.78"
+            y2="540"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stop-color="#c8944b" />
+            <stop offset="1" stop-color="#edd57c" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#linear-gradient)"
+          d="M702.37,454.5V625.65a7.13,7.13,0,1,1-14.26,0V476.81l-65.48,92.31a7.2,7.2,0,0,1-11.67,0l-65.48-92.31V625.65a7.13,7.13,0,1,1-14.26,0V454.5a6.68,6.68,0,0,1,4.93-6.87,6.6,6.6,0,0,1,8,2.73l72.6,102.29L689.4,450.36c2.08-2.86,4.75-3.76,8-2.73A6.69,6.69,0,0,1,702.37,454.5Zm96.79-7.13A7.08,7.08,0,0,0,792,454.5V625.65a7.13,7.13,0,1,0,14.26,0V454.5a7.1,7.1,0,0,0-7.13-7.13ZM975.43,564.19a58.56,58.56,0,0,0,34.88-99.7A56.36,56.36,0,0,0,969,447.37H903.08a7.14,7.14,0,1,0,0,14.27H969a44.34,44.34,0,1,1,0,88.68H903.08a7.08,7.08,0,0,0-7.13,7.13v68.2a7.13,7.13,0,1,0,14.26,0V564.58h46.16l60.81,65.87a6.66,6.66,0,0,0,5.18,2.33,7.08,7.08,0,0,0,7.14-6.87,6.7,6.7,0,0,0-1.82-5.06Zm232.93-112.54a6.51,6.51,0,0,0-6.48-4.28,6.77,6.77,0,0,0-6.62,4.28L1120.45,622.8a7,7,0,0,0-.13,5.44,6.64,6.64,0,0,0,3.76,3.89,7.08,7.08,0,0,0,9.47-3.63l68.33-156.23,63.92,146.25H1184a7.13,7.13,0,1,0,0,14.26h92.71a6.66,6.66,0,0,0,6-3.24,6.55,6.55,0,0,0,.65-6.74Zm178.34-2.2a7.13,7.13,0,0,0-12.18,5.05V625.65a7.13,7.13,0,1,0,14.26,0V454.5A6.85,6.85,0,0,0,1386.7,449.45Z"
         />
-      </a>
-      <!-- <a href="#" target="_blank">
+      </svg>
+    </div>
+    <div class="main-content">
+      <svg
+        id="Layer_1"
+        class="logo"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 1920 1080"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              fill: url(#linear-gradient);
+            }
+          </style>
+          <linearGradient
+            id="linear-gradient"
+            x1="531.22"
+            y1="540"
+            x2="1388.78"
+            y2="540"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stop-color="#c8944b" />
+            <stop offset="1" stop-color="#edd57c" />
+          </linearGradient>
+        </defs>
+        <path
+          class="cls-1"
+          d="M702.37,454.5V625.65a7.13,7.13,0,1,1-14.26,0V476.81l-65.48,92.31a7.2,7.2,0,0,1-11.67,0l-65.48-92.31V625.65a7.13,7.13,0,1,1-14.26,0V454.5a6.68,6.68,0,0,1,4.93-6.87,6.6,6.6,0,0,1,8,2.73l72.6,102.29L689.4,450.36c2.08-2.86,4.75-3.76,8-2.73A6.69,6.69,0,0,1,702.37,454.5Zm96.79-7.13A7.08,7.08,0,0,0,792,454.5V625.65a7.13,7.13,0,1,0,14.26,0V454.5a7.1,7.1,0,0,0-7.13-7.13ZM975.43,564.19a58.56,58.56,0,0,0,34.88-99.7A56.36,56.36,0,0,0,969,447.37H903.08a7.14,7.14,0,1,0,0,14.27H969a44.34,44.34,0,1,1,0,88.68H903.08a7.08,7.08,0,0,0-7.13,7.13v68.2a7.13,7.13,0,1,0,14.26,0V564.58h46.16l60.81,65.87a6.66,6.66,0,0,0,5.18,2.33,7.08,7.08,0,0,0,7.14-6.87,6.7,6.7,0,0,0-1.82-5.06Zm232.93-112.54a6.51,6.51,0,0,0-6.48-4.28,6.77,6.77,0,0,0-6.62,4.28L1120.45,622.8a7,7,0,0,0-.13,5.44,6.64,6.64,0,0,0,3.76,3.89,7.08,7.08,0,0,0,9.47-3.63l68.33-156.23,63.92,146.25H1184a7.13,7.13,0,1,0,0,14.26h92.71a6.66,6.66,0,0,0,6-3.24,6.55,6.55,0,0,0,.65-6.74Zm178.34-2.2a7.13,7.13,0,0,0-12.18,5.05V625.65a7.13,7.13,0,1,0,14.26,0V454.5A6.85,6.85,0,0,0,1386.7,449.45Z"
+        />
+      </svg>
+      <h2 class="launch-text">Launching soon!</h2>
+      <p class="subtitle">
+        We are currently making some improvements to our website!
+      </p>
+      <button class="notify-btn">Notify Me</button>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/themiraigroup/" target="_blank">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItaW5zdGFncmFtIj48cmVjdCB4PSIyIiB5PSIyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI1IiByeT0iNSI+PC9yZWN0PjxwYXRoIGQ9Ik0xNiAxMS4zN0E0IDQgMCAxIDEgMTIuNjMgOCA0IDQgMCAwIDEgMTYgMTEuMzd6Ij48L3BhdGg+PGxpbmUgeDE9IjE3LjUiIHkxPSI2LjUiIHgyPSIxNy41MSIgeTI9IjYuNSI+PC9saW5lPjwvc3ZnPg=="
+            alt="Instagram"
+            class="social-icon"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCwoPGReEgmveJdCg9JT1K_g"
+          target="_blank"
+        >
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjEuNTkzIDcuMjAzYTIuNTA2IDIuNTA2IDAgMCAwLTEuNzYyLTEuNzY2QzE4LjI2NSA1LjAwNyAxMiA1IDEyIDVzLTYuMjY0LS4wMDctNy44MzEuNDA0YTIuNTYgMi41NiAwIDAgMC0xLjc2NiAxLjc3OGMtLjQxMyAxLjU2Ni0uNDE3IDQuODE0LS40MTcgNC44MTRzLS4wMDQgMy4yNjQuNDA2IDQuODE0Yy4yMy44NTcuOTA1IDEuNTM0IDEuNzYzIDEuNzY1IDEuNTgyLjQzMCA3LjgzLjQzNyA3LjgzLjQzN3M2LjI2NS4wMDcgNy44MzEtLjQwM2EyLjUxNSAyLjUxNSAwIDAgMCAxLjc2Ny0xLjc2M2MuNDE0LTEuNTY1LjQxNy00LjgxMi40MTctNC44MTJzLjAyLTMuMjY1LS40MDctNC44MzF6TTkuOTk2IDE1LjAwNWwuMDA1LTYgNS4yMDcgMy4wMDUtNS4yMTIgMi45OTV6Ii8+PC9zdmc+"
+            alt="YouTube"
+            class="social-icon"
+          />
+        </a>
+        <!-- <a href="#" target="_blank">
         <img
           src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBkPSJNMTkuNTg5IDYuNjg2YTQuNzkzIDQuNzkzIDAgMCAxLTMuNzctNC4yNDVWMmgtMy40NDV2MTMuNjcyYTIuODk2IDIuODk2IDAgMCAxLTUuMjAxIDEuNzQzbC0uMDAyLS4wMDEuMDAyLjAwMWEyLjg5NSAyLjg5NSAwIDAgMSAzLjE4My00LjUxdi0zLjVhNi4zMjkgNi4zMjkgMCAwIDAtNS4zOTQgMTAuNjkyIDYuMzMgNi4zMyAwIDAgMCAxMC44NTctNC40MjRWOC42ODdhOC4xODIgOC4xODIgMCAwIDAgNC43NzMgMS41MjZWNi43OWE0LjgzMSA0LjgzMSAwIDAgMS0xLjAwMy0uMTA0eiIvPjwvc3ZnPg=="
           alt="TikTok"
           class="social-icon"
         />
       </a> -->
+      </div>
     </div>
   </body>
 </html>
