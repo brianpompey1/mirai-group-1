@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MIRAI - Launching Soon</title>
-    <script id="mcjs">
-      !(function (c, h, i, m, p) {
-        (m = c.createElement(h)),
-          (p = c.getElementsByTagName(h)[0]),
-          (m.async = 1),
-          (m.src = i),
-          p.parentNode.insertBefore(m, p);
+    <script>
+      (function (w, d, e, u, f, l, n) {
+        (w[f] =
+          w[f] ||
+          function () {
+            (w[f].q = w[f].q || []).push(arguments);
+          }),
+          (l = d.createElement(e)),
+          (l.async = 1),
+          (l.src = u),
+          (n = d.getElementsByTagName(e)[0]),
+          n.parentNode.insertBefore(l, n);
       })(
+        window,
         document,
         "script",
-        "https://chimpstatic.com/mcjs-connected/js/users/151aa8df4378c49dfdd02a282/5748eb769eb3c8ab0ce365701.js"
+        "https://assets.mailerlite.com/js/universal.js",
+        "ml"
       );
+      ml("account", "1308897");
     </script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
@@ -135,6 +143,11 @@
     <p class="subtitle">
       We are currently making some improvements to our website!
     </p>
+    <button class="ml-onclick-form" onclick="ml('show', 'eG1VMu', true)">
+      Click here to show form
+    </button>
+    <!-- <div class="ml-embedded" data-form="eG1VMu"></div> -->
+
     <button class="notify-btn">Notify Me</button>
     <div class="social-icons">
       <a href="https://www.instagram.com/themiraigroup/" target="_blank">
