@@ -13,19 +13,6 @@
         box-sizing: border-box;
       }
 
-      /* body {
-        background-color: #000000;
-        color: #ffffff;
-        font-family: "Inter", sans-serif;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-      } */
-
       body {
         background-color: #000000;
         color: #ffffff;
@@ -50,23 +37,28 @@
 
       .animated-logo {
         width: 400px;
-        opacity: 0;
-        transform: scale(0.8);
-        animation: logoAnimation 2s ease-in-out forwards;
       }
 
-      @keyframes logoAnimation {
-        0% {
-          opacity: 0;
-          transform: scale(0.8);
+      .animated-logo path {
+        stroke: #c8944b;
+        stroke-width: 2;
+        fill-opacity: 0;
+        stroke-dasharray: 2500;
+        stroke-dashoffset: 2500;
+        animation: draw 2s ease-in-out forwards,
+          fillIn 0.5s ease-in-out 2s forwards;
+      }
+
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
         }
-        50% {
-          opacity: 1;
-          transform: scale(1.1);
-        }
-        100% {
-          opacity: 1;
-          transform: scale(1);
+      }
+
+      @keyframes fillIn {
+        to {
+          fill-opacity: 1;
+          stroke-width: 0;
         }
       }
 
@@ -145,69 +137,9 @@
         filter: invert(77%) sepia(38%) saturate(638%) hue-rotate(358deg)
           brightness(89%) contrast(90%);
       }
-
-      /* .logo {
-        font-size: 4rem;
-        letter-spacing: 0.2em;
-        color: #d4af37;
-        margin-bottom: 2rem;
-        font-weight: 300;
-      } */
-
-      /* .launch-text {
-        font-size: 2.5rem;
-        color: #8b7355;
-        margin-bottom: 1rem;
-        font-weight: 300;
-      }
-
-      .subtitle {
-        font-size: 1rem;
-        color: #8b7355;
-        margin-bottom: 2rem;
-        max-width: 600px;
-      }
-
-      .notify-btn {
-        background-color: #ffffff;
-        color: #000000;
-        border: none;
-        padding: 12px 40px;
-        border-radius: 25px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 3rem;
-      } */
-
-      /* .notify-btn:hover {
-        background-color: #d4af37;
-        color: #ffffff;
-      }
-
-      .logo {
-        margin-bottom: -40px;
-      }
-
-      .social-icon {
-        width: 24px;
-        height: 24px;
-        filter: invert(50%) sepia(13%) saturate(654%) hue-rotate(7deg)
-          brightness(89%) contrast(87%);
-        margin: 0 8px;
-      }
-
-      .social-icon:hover {
-        filter: invert(77%) sepia(38%) saturate(638%) hue-rotate(358deg)
-          brightness(89%) contrast(90%);
-      } */
     </style>
   </head>
   <body>
-    <!-- <h1 class="logo">MIRAI</h1> -->
-
     <div class="intro-animation">
       <svg
         class="animated-logo"
@@ -290,13 +222,6 @@
             class="social-icon"
           />
         </a>
-        <!-- <a href="#" target="_blank">
-        <img
-          src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBkPSJNMTkuNTg5IDYuNjg2YTQuNzkzIDQuNzkzIDAgMCAxLTMuNzctNC4yNDVWMmgtMy40NDV2MTMuNjcyYTIuODk2IDIuODk2IDAgMCAxLTUuMjAxIDEuNzQzbC0uMDAyLS4wMDEuMDAyLjAwMWEyLjg5NSAyLjg5NSAwIDAgMSAzLjE4My00LjUxdi0zLjVhNi4zMjkgNi4zMjkgMCAwIDAtNS4zOTQgMTAuNjkyIDYuMzMgNi4zMyAwIDAgMCAxMC44NTctNC40MjRWOC42ODdhOC4xODIgOC4xODIgMCAwIDAgNC43NzMgMS41MjZWNi43OWE0LjgzMSA0LjgzMSAwIDAgMS0xLjAwMy0uMTA0eiIvPjwvc3ZnPg=="
-          alt="TikTok"
-          class="social-icon"
-        />
-      </a> -->
       </div>
     </div>
   </body>
